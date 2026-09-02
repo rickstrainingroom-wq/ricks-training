@@ -553,6 +553,129 @@
     padding:18px 16px 26px;
   }
   footer span{color:var(--gold);}
+
+
+/* =========================================================
+   LG webOS / older Smart-TV browser compatibility fallbacks
+   Uses only broadly supported CSS (no variables/clamp/grid).
+   ========================================================= */
+body{
+  margin:0;
+  background:#0D0D0E;
+  color:#F5F5F2;
+  font-family:Arial,Helvetica,sans-serif;
+  min-height:100%;
+}
+.display,.clock,.plan-head h2,.focus-row input,.st-num,.time-readout,.phase-name,.fs-focus{
+  font-family:Impact,'Arial Narrow',Arial,sans-serif;
+}
+.topbar{
+  display:block;
+  overflow:hidden;
+  padding:18px 36px;
+  border-bottom:1px solid #2f2f31;
+  min-height:120px;
+}
+.brand{float:left;display:block;}
+.brand img{height:115px;width:auto;display:block;}
+.topbar-right{float:right;display:block;text-align:right;padding-top:25px;}
+.clock-block{display:inline-block;vertical-align:middle;margin-right:18px;}
+.clock{font-size:28px;color:#F5F5F2;}
+.date-line{font-size:12px;color:#999;}
+.slot-pill{
+  display:inline-block;vertical-align:middle;
+  background:#211d14;border:1px solid #806a36;color:#E4C374;
+  padding:10px 16px;border-radius:24px;font-size:13px;
+}
+.slot-pill .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#E4C374;margin-right:8px;}
+main.grid{display:block;overflow:hidden;padding:24px 36px 36px;}
+main.grid > .card{
+  background:#171718;border:1px solid #303032;border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.35);padding:22px;
+}
+main.grid > .card:first-child{float:left;width:54%;}
+main.grid > .timer-card{float:right;width:40%;}
+.plan-head{display:block;overflow:hidden;margin-bottom:8px;}
+.plan-head h2{float:left;font-size:30px;color:#E4C374;margin:0;}
+.plan-date-picker{float:right;font-size:12px;color:#999;}
+.plan-date-picker input[type=date]{background:#222;color:#F5F5F2;border:1px solid #3a3a3c;border-radius:8px;padding:6px 8px;}
+.save-state{font-size:11px;color:#777;margin-bottom:14px;min-height:14px;}
+.focus-row{margin-bottom:16px;}
+.focus-row label,.settings-row label{display:block;font-size:11px;color:#999;margin-bottom:6px;text-transform:uppercase;}
+.focus-row input,.settings-row .field input,.st-row input[type=text],.custom-set input[type=number]{
+  background:#222;color:#F5F5F2;border:1px solid #3a3a3c;border-radius:8px;
+}
+.focus-row input{width:100%;padding:11px 12px;font-size:18px;}
+.settings-row{display:block;overflow:hidden;margin-bottom:18px;}
+.settings-row .field{float:left;width:31%;margin-right:2%;}
+.settings-row .field input{width:100%;padding:9px 8px;font-size:14px;}
+.settings-row .field span.unit{display:block;font-size:10px;color:#777;margin-top:3px;}
+.station-table-head,.st-row{display:block;overflow:hidden;}
+.station-table-head{font-size:10px;color:#777;text-transform:uppercase;padding-bottom:6px;}
+.station-table-head > *,.st-row > *{float:left;}
+.station-table-head > *:nth-child(1),.st-row > *:nth-child(1){width:6%;}
+.station-table-head > *:nth-child(2),.st-row > *:nth-child(2){width:55%;}
+.station-table-head > *:nth-child(3),.st-row > *:nth-child(3){width:27%;}
+.station-table-head > *:nth-child(4),.st-row > *:nth-child(4){width:8%;}
+#stationList{display:block;margin-bottom:14px;}
+.st-row{margin-bottom:8px;}
+.st-num{font-size:18px;color:#C9A24B;text-align:center;padding-top:10px;}
+.st-row input[type=text]{width:96%;padding:10px 10px;font-size:14px;}
+.st-time{background:#222;border:1px solid #3a3a3c;border-radius:8px;padding:0 6px;white-space:nowrap;}
+.st-time input[type=number]{width:48px;background:transparent;border:0;color:#F5F5F2;padding:9px 0;font-size:14px;text-align:right;}
+.st-time span{font-size:11px;color:#777;}
+.st-del{width:32px;height:32px;margin-top:2px;background:transparent;color:#aaa;border:1px solid #3a3a3c;border-radius:8px;}
+.plan-actions{display:block;margin-top:8px;}
+.btn{display:inline-block;font-family:Arial,sans-serif;font-weight:bold;font-size:13px;border-radius:9px;padding:10px 16px;margin:4px;border:1px solid #444;cursor:pointer;}
+.btn-gold{background:#C9A24B;color:#0D0D0E;border-color:#C9A24B;}
+.btn-ghost{background:#171718;color:#F5F5F2;border-color:#3a3a3c;}
+.btn-start{background:#2A2A2C;color:#F5F5F2;border-color:#444;}
+.timer-card{text-align:center;}
+.tabs{display:block;background:#202021;border:1px solid #333;border-radius:24px;padding:4px;margin:0 auto 18px;width:250px;}
+.tab-btn{display:inline-block;background:transparent;color:#aaa;border:0;border-radius:20px;padding:9px 16px;font-weight:bold;font-size:12px;}
+.tab-btn.active{background:#C9A24B;color:#0D0D0E;}
+.tab-panel{display:none;width:100%;text-align:center;}
+.tab-panel.active{display:block;}
+.phase-pill{display:inline-block;background:#202021;border:1px solid #333;border-radius:20px;padding:6px 13px;font-size:11px;color:#aaa;margin-bottom:12px;}
+.phase-pill.work{color:#E4C374;border-color:#806a36;}
+.phase-pill.rest{color:#8fb79c;border-color:#496b54;}
+.ring-wrap{position:relative;width:280px;height:280px;margin:4px auto 12px;}
+.ring-wrap svg{width:280px;height:280px;transform:rotate(-90deg);-webkit-transform:rotate(-90deg);}
+.ring-bg{fill:none;stroke:#29292b;stroke-width:14;}
+.ring-fg{fill:none;stroke:#C9A24B;stroke-width:14;stroke-linecap:round;}
+.ring-fg.rest{stroke:#6f9a80}.ring-fg.warn{stroke:#E2574C}
+.ring-center{position:absolute;left:0;top:0;width:100%;height:100%;text-align:center;padding-top:92px;}
+.time-readout{font-size:64px;line-height:1;color:#F5F5F2;}
+.time-readout.warn{color:#E2574C;}
+.phase-name{font-size:20px;color:#F5F5F2;margin-top:4px;}
+.next-up{font-size:11px;color:#777;margin-bottom:14px;min-height:14px;}
+.quick-adjust,.presets,.custom-set,.timer-controls{display:block;text-align:center;margin-bottom:14px;}
+.quick-adjust button,.chip{display:inline-block;margin:3px;background:#202021;color:#F5F5F2;border:1px solid #3a3a3c;border-radius:9px;padding:8px 12px;}
+.chip{border-radius:20px}.chip.active{background:#C9A24B;color:#0D0D0E;border-color:#C9A24B;}
+.custom-set input[type=number]{width:58px;text-align:center;padding:9px 4px;color:#F5F5F2;}
+.fullscreen-toggle{margin-top:14px;background:none;border:0;color:#888;font-size:11px;text-decoration:underline;}
+footer{text-align:center;font-size:11px;color:#666;padding:15px;}
+footer span{color:#C9A24B;}
+#fsOverlay{position:fixed;left:0;top:0;right:0;bottom:0;background:#0D0D0E;display:none;text-align:center;z-index:999;padding:20px;}
+#fsOverlay.active{display:block;}
+#fsOverlay img.fs-logo{height:100px;width:auto;margin:8px auto 10px;display:block;}
+#fsOverlay .fs-ring-wrap{position:relative;width:500px;height:500px;margin:0 auto;}
+#fsOverlay .fs-ring-wrap svg{width:500px;height:500px;transform:rotate(-90deg);-webkit-transform:rotate(-90deg);}
+#fsOverlay .ring-center{padding-top:165px;}
+#fsOverlay .time-readout{font-size:130px;}
+#fsOverlay .phase-name{font-size:28px;}
+#fsOverlay .next-up{font-size:14px;margin-top:12px;}
+.fs-close{position:absolute;right:24px;top:20px;width:40px;height:40px;border-radius:20px;background:#171718;color:#fff;border:1px solid #444;}
+@media (max-width:920px){
+  .topbar{padding:18px 20px;min-height:0;}
+  .brand,.topbar-right{float:none;text-align:left;}
+  .brand img{height:110px;}
+  .topbar-right{padding-top:8px;}
+  main.grid{padding:16px;}
+  main.grid > .card:first-child,main.grid > .timer-card{float:none;width:auto;margin-bottom:16px;}
+  .settings-row .field{float:none;width:auto;margin:0 0 10px;}
+}
+
 </style>
 </head>
 <body>
@@ -723,730 +846,739 @@
 </div>
 
 <script>
-(function(){
-  "use strict";
-
-  /* ================= Clock & Slot ================= */
-  const SLOTS = [
-    {label:"Early Bird", time:"06:30"},
-    {label:"Morning Boost", time:"07:45"},
-    {label:"After Work", time:"17:30"},
-    {label:"Last Rep", time:"18:45"}
-  ];
-  const TZ = "Europe/Vienna";
-
-  function fmtParts(){
-    const dtf = new Intl.DateTimeFormat('de-AT', {timeZone:TZ, hour:'2-digit', minute:'2-digit', hour12:false});
-    return dtf.format(new Date());
-  }
-  function updateClock(){
-    document.getElementById('clockNow').textContent = fmtParts();
-    const dateStr = new Intl.DateTimeFormat('de-AT', {timeZone:TZ, weekday:'long', day:'2-digit', month:'long'}).format(new Date());
-    document.getElementById('dateNow').textContent = dateStr;
-    updateSlot();
-  }
-  function toMinutes(hhmm){
-    const [h,m] = hhmm.split(':').map(Number);
-    return h*60+m;
-  }
-  function updateSlot(){
-    const nowMin = toMinutes(fmtParts());
-    let current = null, next = null;
-    for(const s of SLOTS){
-      const start = toMinutes(s.time);
-      if(nowMin >= start && nowMin < start + 75){ current = s; break; }
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+(function () {
+    "use strict";
+    /* ================= Clock & Slot ================= */
+    var SLOTS = [
+        { label: "Early Bird", time: "06:30" },
+        { label: "Morning Boost", time: "07:45" },
+        { label: "After Work", time: "17:30" },
+        { label: "Last Rep", time: "18:45" }
+    ];
+    var TZ = "Europe/Vienna";
+    function fmtParts() {
+        var dtf = new Intl.DateTimeFormat('de-AT', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hour12: false });
+        return dtf.format(new Date());
     }
-    if(!current){
-      for(const s of SLOTS){
-        if(toMinutes(s.time) > nowMin){ next = s; break; }
-      }
+    function updateClock() {
+        document.getElementById('clockNow').textContent = fmtParts();
+        var dateStr = new Intl.DateTimeFormat('de-AT', { timeZone: TZ, weekday: 'long', day: '2-digit', month: 'long' }).format(new Date());
+        document.getElementById('dateNow').textContent = dateStr;
+        updateSlot();
     }
-    const slotText = document.getElementById('slotText');
-    if(current){
-      slotText.textContent = "Läuft: " + current.label + " · " + current.time;
-    } else if(next){
-      slotText.textContent = "Nächste: " + next.label + " · " + next.time;
-    } else {
-      slotText.textContent = "Kein weiteres Training heute";
+    function toMinutes(hhmm) {
+        var _a = hhmm.split(':').map(Number), h = _a[0], m = _a[1];
+        return h * 60 + m;
     }
-  }
-  setInterval(updateClock, 1000);
-  updateClock();
-
-  /* ================= Plan storage ================= */
-  const planDateInput = document.getElementById('planDate');
-  const focusInput = document.getElementById('focusInput');
-  const roundsInput = document.getElementById('roundsInput');
-  const restStationInput = document.getElementById('restStationInput');
-  const restRoundInput = document.getElementById('restRoundInput');
-  const stationList = document.getElementById('stationList');
-  const emptyHint = document.getElementById('emptyHint');
-  const saveState = document.getElementById('saveState');
-
-  function todayISO(){
-    const d = new Date();
-    const off = d.getTimezoneOffset();
-    const local = new Date(d.getTime() - off*60000);
-    return local.toISOString().slice(0,10);
-  }
-  function isoMinusDays(iso, days){
-    const d = new Date(iso + "T00:00:00");
-    d.setDate(d.getDate()-days);
-    return d.toISOString().slice(0,10);
-  }
-  function planKey(iso){ return "ricks_plan_v2_" + iso; }
-
-  const HYROX_EXAMPLE = {
-    focus: "HYROX Zirkel",
-    rounds: 3,
-    restStation: 45,
-    restRound: 90,
-    stations: [
-      {name:"SkiErg", seconds:60},
-      {name:"Sled Push", seconds:60},
-      {name:"Sled Pull", seconds:60},
-      {name:"Burpee Broad Jumps", seconds:60},
-      {name:"Row", seconds:60},
-      {name:"Farmers Carry", seconds:60},
-      {name:"Sandbag Lunges", seconds:60},
-      {name:"Wall Balls", seconds:60}
-    ]
-  };
-
-  function defaultPlan(){
-    return {focus:"", rounds:3, restStation:45, restRound:90, stations:[]};
-  }
-
-  function loadPlan(iso){
-    try{
-      const raw = localStorage.getItem(planKey(iso));
-      if(!raw) return defaultPlan();
-      const p = JSON.parse(raw);
-      return {
-        focus: p.focus || "",
-        rounds: p.rounds || 3,
-        restStation: (p.restStation !== undefined) ? p.restStation : 45,
-        restRound: (p.restRound !== undefined) ? p.restRound : 90,
-        stations: Array.isArray(p.stations) ? p.stations : []
-      };
-    }catch(e){ return defaultPlan(); }
-  }
-  function savePlan(iso, data){
-    localStorage.setItem(planKey(iso), JSON.stringify(data));
-    saveState.textContent = "Gespeichert · " + new Date().toLocaleTimeString('de-AT', {hour:'2-digit', minute:'2-digit'});
-  }
-
-  let currentISO = todayISO();
-  let currentPlan = defaultPlan();
-  let saveTimer = null;
-
-  function scheduleSave(rebuildCircuit){
-    clearTimeout(saveTimer);
-    saveTimer = setTimeout(()=>{
-      currentPlan.focus = focusInput.value;
-      currentPlan.rounds = Math.max(1, parseInt(roundsInput.value,10) || 1);
-      currentPlan.restStation = Math.max(0, parseInt(restStationInput.value,10) || 0);
-      currentPlan.restRound = Math.max(0, parseInt(restRoundInput.value,10) || 0);
-      savePlan(currentISO, currentPlan);
-      if(rebuildCircuit !== false && !circuitRunning){
+    function updateSlot() {
+        var nowMin = toMinutes(fmtParts());
+        var current = null, next = null;
+        for (var _i = 0, SLOTS_1 = SLOTS; _i < SLOTS_1.length; _i++) {
+            var s = SLOTS_1[_i];
+            var start = toMinutes(s.time);
+            if (nowMin >= start && nowMin < start + 75) {
+                current = s;
+                break;
+            }
+        }
+        if (!current) {
+            for (var _a = 0, SLOTS_2 = SLOTS; _a < SLOTS_2.length; _a++) {
+                var s = SLOTS_2[_a];
+                if (toMinutes(s.time) > nowMin) {
+                    next = s;
+                    break;
+                }
+            }
+        }
+        var slotText = document.getElementById('slotText');
+        if (current) {
+            slotText.textContent = "Läuft: " + current.label + " · " + current.time;
+        }
+        else if (next) {
+            slotText.textContent = "Nächste: " + next.label + " · " + next.time;
+        }
+        else {
+            slotText.textContent = "Kein weiteres Training heute";
+        }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+    /* ================= Plan storage ================= */
+    var planDateInput = document.getElementById('planDate');
+    var focusInput = document.getElementById('focusInput');
+    var roundsInput = document.getElementById('roundsInput');
+    var restStationInput = document.getElementById('restStationInput');
+    var restRoundInput = document.getElementById('restRoundInput');
+    var stationList = document.getElementById('stationList');
+    var emptyHint = document.getElementById('emptyHint');
+    var saveState = document.getElementById('saveState');
+    function todayISO() {
+        var d = new Date();
+        var off = d.getTimezoneOffset();
+        var local = new Date(d.getTime() - off * 60000);
+        return local.toISOString().slice(0, 10);
+    }
+    function isoMinusDays(iso, days) {
+        var d = new Date(iso + "T00:00:00");
+        d.setDate(d.getDate() - days);
+        return d.toISOString().slice(0, 10);
+    }
+    function planKey(iso) { return "ricks_plan_v2_" + iso; }
+    var HYROX_EXAMPLE = {
+        focus: "HYROX Zirkel",
+        rounds: 3,
+        restStation: 45,
+        restRound: 90,
+        stations: [
+            { name: "SkiErg", seconds: 60 },
+            { name: "Sled Push", seconds: 60 },
+            { name: "Sled Pull", seconds: 60 },
+            { name: "Burpee Broad Jumps", seconds: 60 },
+            { name: "Row", seconds: 60 },
+            { name: "Farmers Carry", seconds: 60 },
+            { name: "Sandbag Lunges", seconds: 60 },
+            { name: "Wall Balls", seconds: 60 }
+        ]
+    };
+    function defaultPlan() {
+        return { focus: "", rounds: 3, restStation: 45, restRound: 90, stations: [] };
+    }
+    function loadPlan(iso) {
+        try {
+            var raw = localStorage.getItem(planKey(iso));
+            if (!raw)
+                return defaultPlan();
+            var p = JSON.parse(raw);
+            return {
+                focus: p.focus || "",
+                rounds: p.rounds || 3,
+                restStation: (p.restStation !== undefined) ? p.restStation : 45,
+                restRound: (p.restRound !== undefined) ? p.restRound : 90,
+                stations: Array.isArray(p.stations) ? p.stations : []
+            };
+        }
+        catch (e) {
+            return defaultPlan();
+        }
+    }
+    function savePlan(iso, data) {
+        localStorage.setItem(planKey(iso), JSON.stringify(data));
+        saveState.textContent = "Gespeichert · " + new Date().toLocaleTimeString('de-AT', { hour: '2-digit', minute: '2-digit' });
+    }
+    var currentISO = todayISO();
+    var currentPlan = defaultPlan();
+    var saveTimer = null;
+    function scheduleSave(rebuildCircuit) {
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(function () {
+            currentPlan.focus = focusInput.value;
+            currentPlan.rounds = Math.max(1, parseInt(roundsInput.value, 10) || 1);
+            currentPlan.restStation = Math.max(0, parseInt(restStationInput.value, 10) || 0);
+            currentPlan.restRound = Math.max(0, parseInt(restRoundInput.value, 10) || 0);
+            savePlan(currentISO, currentPlan);
+            if (rebuildCircuit !== false && !circuitRunning) {
+                rebuildCircuitFromPlan();
+            }
+        }, 300);
+    }
+    function renderStations() {
+        stationList.innerHTML = "";
+        emptyHint.style.display = currentPlan.stations.length === 0 ? "block" : "none";
+        currentPlan.stations.forEach(function (st, idx) {
+            var row = document.createElement('div');
+            row.className = 'st-row';
+            var num = document.createElement('div');
+            num.className = 'st-num';
+            num.textContent = (idx + 1).toString().padStart(2, '0');
+            var nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.placeholder = 'Übung, z. B. SkiErg';
+            nameInput.value = st.name || '';
+            nameInput.addEventListener('input', function () {
+                currentPlan.stations[idx].name = nameInput.value;
+                scheduleSave();
+            });
+            var timeWrap = document.createElement('div');
+            timeWrap.className = 'st-time';
+            var timeInput = document.createElement('input');
+            timeInput.type = 'number';
+            timeInput.min = '5';
+            timeInput.max = '600';
+            timeInput.value = st.seconds || 60;
+            timeInput.addEventListener('input', function () {
+                currentPlan.stations[idx].seconds = Math.max(5, parseInt(timeInput.value, 10) || 60);
+                scheduleSave();
+            });
+            var timeUnit = document.createElement('span');
+            timeUnit.textContent = 'sek';
+            timeWrap.appendChild(timeInput);
+            timeWrap.appendChild(timeUnit);
+            var del = document.createElement('button');
+            del.className = 'st-del';
+            del.type = 'button';
+            del.textContent = '×';
+            del.addEventListener('click', function () {
+                currentPlan.stations.splice(idx, 1);
+                renderStations();
+                scheduleSave();
+            });
+            row.appendChild(num);
+            row.appendChild(nameInput);
+            row.appendChild(timeWrap);
+            row.appendChild(del);
+            stationList.appendChild(row);
+        });
+    }
+    function loadIntoUI(iso) {
+        currentISO = iso;
+        currentPlan = loadPlan(iso);
+        focusInput.value = currentPlan.focus;
+        roundsInput.value = currentPlan.rounds;
+        restStationInput.value = currentPlan.restStation;
+        restRoundInput.value = currentPlan.restRound;
+        planDateInput.value = iso;
+        renderStations();
+        saveState.textContent = "";
         rebuildCircuitFromPlan();
-      }
-    }, 300);
-  }
-
-  function renderStations(){
-    stationList.innerHTML = "";
-    emptyHint.style.display = currentPlan.stations.length === 0 ? "block" : "none";
-    currentPlan.stations.forEach((st, idx)=>{
-      const row = document.createElement('div');
-      row.className = 'st-row';
-
-      const num = document.createElement('div');
-      num.className = 'st-num';
-      num.textContent = (idx+1).toString().padStart(2,'0');
-
-      const nameInput = document.createElement('input');
-      nameInput.type = 'text';
-      nameInput.placeholder = 'Übung, z. B. SkiErg';
-      nameInput.value = st.name || '';
-      nameInput.addEventListener('input', ()=>{
-        currentPlan.stations[idx].name = nameInput.value;
-        scheduleSave();
-      });
-
-      const timeWrap = document.createElement('div');
-      timeWrap.className = 'st-time';
-      const timeInput = document.createElement('input');
-      timeInput.type = 'number';
-      timeInput.min = '5'; timeInput.max = '600';
-      timeInput.value = st.seconds || 60;
-      timeInput.addEventListener('input', ()=>{
-        currentPlan.stations[idx].seconds = Math.max(5, parseInt(timeInput.value,10) || 60);
-        scheduleSave();
-      });
-      const timeUnit = document.createElement('span');
-      timeUnit.textContent = 'sek';
-      timeWrap.appendChild(timeInput);
-      timeWrap.appendChild(timeUnit);
-
-      const del = document.createElement('button');
-      del.className = 'st-del';
-      del.type = 'button';
-      del.textContent = '×';
-      del.addEventListener('click', ()=>{
-        currentPlan.stations.splice(idx,1);
+    }
+    document.getElementById('addStationBtn').addEventListener('click', function () {
+        currentPlan.stations.push({ name: "", seconds: 60 });
         renderStations();
         scheduleSave();
-      });
-
-      row.appendChild(num);
-      row.appendChild(nameInput);
-      row.appendChild(timeWrap);
-      row.appendChild(del);
-      stationList.appendChild(row);
-    });
-  }
-
-  function loadIntoUI(iso){
-    currentISO = iso;
-    currentPlan = loadPlan(iso);
-    focusInput.value = currentPlan.focus;
-    roundsInput.value = currentPlan.rounds;
-    restStationInput.value = currentPlan.restStation;
-    restRoundInput.value = currentPlan.restRound;
-    planDateInput.value = iso;
-    renderStations();
-    saveState.textContent = "";
-    rebuildCircuitFromPlan();
-  }
-
-  document.getElementById('addStationBtn').addEventListener('click', ()=>{
-    currentPlan.stations.push({name:"", seconds:60});
-    renderStations();
-    scheduleSave();
-    const inputs = stationList.querySelectorAll('.st-row input[type="text"]');
-    if(inputs.length){ inputs[inputs.length-1].focus(); }
-  });
-
-  document.getElementById('loadExampleBtn').addEventListener('click', ()=>{
-    currentPlan = {
-      focus: HYROX_EXAMPLE.focus,
-      rounds: HYROX_EXAMPLE.rounds,
-      restStation: HYROX_EXAMPLE.restStation,
-      restRound: HYROX_EXAMPLE.restRound,
-      stations: HYROX_EXAMPLE.stations.map(s=>({...s}))
-    };
-    focusInput.value = currentPlan.focus;
-    roundsInput.value = currentPlan.rounds;
-    restStationInput.value = currentPlan.restStation;
-    restRoundInput.value = currentPlan.restRound;
-    renderStations();
-    savePlan(currentISO, currentPlan);
-    rebuildCircuitFromPlan();
-  });
-
-  document.getElementById('clearPlanBtn').addEventListener('click', ()=>{
-    if(currentPlan.stations.length === 0 && !currentPlan.focus) return;
-    if(confirm('Plan für diesen Tag wirklich leeren?')){
-      currentPlan = defaultPlan();
-      focusInput.value = "";
-      roundsInput.value = 3;
-      restStationInput.value = 45;
-      restRoundInput.value = 90;
-      renderStations();
-      savePlan(currentISO, currentPlan);
-      rebuildCircuitFromPlan();
-    }
-  });
-
-  document.getElementById('copyYesterdayBtn').addEventListener('click', ()=>{
-    const prevISO = isoMinusDays(currentISO, 1);
-    const prevPlan = loadPlan(prevISO);
-    if(prevPlan.stations.length === 0 && !prevPlan.focus){
-      alert('Für den Vortag ist kein Plan gespeichert.');
-      return;
-    }
-    currentPlan = {
-      focus: prevPlan.focus, rounds: prevPlan.rounds,
-      restStation: prevPlan.restStation, restRound: prevPlan.restRound,
-      stations: prevPlan.stations.map(e=>({...e}))
-    };
-    focusInput.value = currentPlan.focus;
-    roundsInput.value = currentPlan.rounds;
-    restStationInput.value = currentPlan.restStation;
-    restRoundInput.value = currentPlan.restRound;
-    renderStations();
-    savePlan(currentISO, currentPlan);
-    rebuildCircuitFromPlan();
-  });
-
-  focusInput.addEventListener('input', ()=>scheduleSave(false));
-  roundsInput.addEventListener('input', ()=>scheduleSave());
-  restStationInput.addEventListener('input', ()=>scheduleSave());
-  restRoundInput.addEventListener('input', ()=>scheduleSave());
-  planDateInput.addEventListener('change', ()=>{
-    loadIntoUI(planDateInput.value || todayISO());
-  });
-
-  /* ================= Tabs ================= */
-  const tabCircuitBtn = document.getElementById('tabCircuitBtn');
-  const tabFreeBtn = document.getElementById('tabFreeBtn');
-  const panelCircuit = document.getElementById('panelCircuit');
-  const panelFree = document.getElementById('panelFree');
-  let activeTab = 'circuit';
-
-  function setTab(tab){
-    activeTab = tab;
-    tabCircuitBtn.classList.toggle('active', tab==='circuit');
-    tabFreeBtn.classList.toggle('active', tab==='free');
-    panelCircuit.classList.toggle('active', tab==='circuit');
-    panelFree.classList.toggle('active', tab==='free');
-  }
-  tabCircuitBtn.addEventListener('click', ()=>setTab('circuit'));
-  tabFreeBtn.addEventListener('click', ()=>setTab('free'));
-
-  /* ================= Shared beep ================= */
-  function beep(pattern){
-    try{
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
-      const now = ctx.currentTime;
-      pattern.forEach(({t, f})=>{
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.value = f;
-        gain.gain.setValueAtTime(0.0001, now+t);
-        gain.gain.exponentialRampToValueAtTime(0.3, now+t+0.02);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now+t+0.2);
-        osc.connect(gain).connect(ctx.destination);
-        osc.start(now+t);
-        osc.stop(now+t+0.25);
-      });
-    }catch(e){ /* ignore */ }
-  }
-  function beepShort(){ beep([{t:0,f:880}]); }
-  function beepFinish(){ beep([{t:0,f:880},{t:0.22,f:880},{t:0.44,f:1046.5}]); }
-
-  function fmt(sec){
-    sec = Math.max(0, Math.ceil(sec));
-    const m = Math.floor(sec/60);
-    const s = sec % 60;
-    return String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-  }
-
-  const RADIUS = 88;
-  const CIRC = 2 * Math.PI * RADIUS;
-  [document.getElementById('cRingFg'), document.getElementById('fRingFg'), document.getElementById('fsRingFg')]
-    .forEach(el=>{ el.style.strokeDasharray = CIRC; });
-
-  /* ================= CIRCUIT ENGINE ================= */
-  const cRingFg = document.getElementById('cRingFg');
-  const cTimeReadout = document.getElementById('cTimeReadout');
-  const cPhaseName = document.getElementById('cPhaseName');
-  const cPhasePill = document.getElementById('cPhasePill');
-  const cPhaseLabel = document.getElementById('cPhaseLabel');
-  const cNextUp = document.getElementById('cNextUp');
-  const cStartBtn = document.getElementById('cStartBtn');
-  const cSkipBtn = document.getElementById('cSkipBtn');
-  const cResetBtn = document.getElementById('cResetBtn');
-
-  const fsRingFg = document.getElementById('fsRingFg');
-  const fsTimeReadout = document.getElementById('fsTimeReadout');
-  const fsPhaseName = document.getElementById('fsPhaseName');
-  const fsPhasePill = document.getElementById('fsPhasePill');
-  const fsPhaseLabel = document.getElementById('fsPhaseLabel');
-  const fsNextUp = document.getElementById('fsNextUp');
-  const fsFocus = document.getElementById('fsFocus');
-  const fsStartBtn = document.getElementById('fsStartBtn');
-  const fsSkipBtn = document.getElementById('fsSkipBtn');
-  const fsResetBtn = document.getElementById('fsResetBtn');
-
-  let circuitSeq = [];
-  let circuitIndex = -1;
-  let circuitRunning = false;
-  let circuitEndAt = null;
-  let circuitPhaseMs = 0;
-  let circuitRaf = null;
-  let circuitFinished = false;
-
-  function buildSequence(plan){
-    const seq = [];
-    const stations = plan.stations.filter(s => (s.name && s.name.trim()) || s.seconds);
-    if(stations.length === 0) return seq;
-    for(let r=1; r<=plan.rounds; r++){
-      stations.forEach((st, i)=>{
-        seq.push({
-          type:'work', round:r, totalRounds:plan.rounds,
-          stationIndex:i+1, totalStations:stations.length,
-          name: st.name && st.name.trim() ? st.name.trim() : ('Station ' + (i+1)),
-          seconds: Math.max(5, st.seconds || 60)
-        });
-        const isLastStationInRound = i === stations.length-1;
-        if(!isLastStationInRound && plan.restStation > 0){
-          seq.push({type:'rest', label:'Pause', seconds:plan.restStation, round:r});
+        var inputs = stationList.querySelectorAll('.st-row input[type="text"]');
+        if (inputs.length) {
+            inputs[inputs.length - 1].focus();
         }
-      });
-      const isLastRound = r === plan.rounds;
-      if(!isLastRound && plan.restRound > 0){
-        seq.push({type:'roundrest', label:'Rundenpause', seconds:plan.restRound, round:r});
-      }
-    }
-    return seq;
-  }
-
-  function rebuildCircuitFromPlan(){
-    stopCircuit();
-    circuitSeq = buildSequence(currentPlan);
-    circuitIndex = -1;
-    circuitFinished = false;
-    const hasStations = circuitSeq.length > 0;
-    cStartBtn.disabled = !hasStations;
-    cSkipBtn.disabled = !hasStations;
-    fsStartBtn.disabled = !hasStations;
-    fsSkipBtn.disabled = !hasStations;
-    paintCircuitIdle(hasStations);
-  }
-
-  function paintCircuitIdle(hasStations){
-    const label = hasStations ? "Bereit" : "Kein Zirkel geplant";
-    cPhaseLabel.textContent = label;
-    fsPhaseLabel.textContent = label;
-    cPhasePill.className = 'phase-pill';
-    fsPhasePill.className = 'phase-pill fs-phase-pill';
-    const firstText = hasStations ? circuitSeq[0].name || circuitSeq[0].label : "Füg Stationen im Plan hinzu";
-    cPhaseName.textContent = hasStations ? ("Runde 1/" + currentPlan.rounds + " · " + firstText) : "Zirkel bereit";
-    fsPhaseName.textContent = cPhaseName.textContent;
-    const totalSec = hasStations ? circuitSeq[0].seconds : 0;
-    cTimeReadout.textContent = fmt(totalSec);
-    fsTimeReadout.textContent = fmt(totalSec);
-    cRingFg.classList.remove('rest','warn');
-    fsRingFg.classList.remove('rest','warn');
-    cRingFg.style.strokeDashoffset = 0;
-    fsRingFg.style.strokeDashoffset = 0;
-    cNextUp.textContent = hasStations ? "" : "";
-    fsNextUp.textContent = "";
-    cStartBtn.textContent = "Start";
-    fsStartBtn.textContent = "Start";
-  }
-
-  function describePhase(p){
-    if(!p) return "";
-    if(p.type === 'work') return "Runde " + p.round + "/" + p.totalRounds + " · Station " + p.stationIndex + "/" + p.totalStations + ": " + p.name;
-    if(p.type === 'rest') return "Runde " + p.round + " · Pause";
-    if(p.type === 'roundrest') return "Rundenpause";
-    return "";
-  }
-  function shortLabel(p){
-    if(!p) return "";
-    if(p.type === 'work') return p.name;
-    return p.label || 'Pause';
-  }
-
-  function paintCircuitPhase(){
-    const p = circuitSeq[circuitIndex];
-    const remSec = Math.max(0, circuitEndAt !== null ? (circuitEndAt - performance.now())/1000 : circuitPhaseMs/1000);
-    const totalSec = p.seconds;
-    const frac = totalSec > 0 ? Math.max(0, remSec/totalSec) : 0;
-    const offset = CIRC * (1 - frac);
-    cRingFg.style.strokeDashoffset = offset;
-    fsRingFg.style.strokeDashoffset = offset;
-
-    const isRest = p.type !== 'work';
-    cRingFg.classList.toggle('rest', isRest);
-    fsRingFg.classList.toggle('rest', isRest);
-    const warn = remSec <= 5 && remSec > 0;
-    cRingFg.classList.toggle('warn', warn && !isRest);
-    fsRingFg.classList.toggle('warn', warn && !isRest);
-    cTimeReadout.classList.toggle('warn', warn && !isRest);
-    fsTimeReadout.classList.toggle('warn', warn && !isRest);
-
-    const text = fmt(remSec);
-    cTimeReadout.textContent = text;
-    fsTimeReadout.textContent = text;
-
-    const desc = describePhase(p);
-    cPhaseName.textContent = desc;
-    fsPhaseName.textContent = desc;
-
-    cPhaseLabel.textContent = isRest ? "Pause" : "Station";
-    fsPhaseLabel.textContent = isRest ? "Pause" : "Station";
-    cPhasePill.className = 'phase-pill ' + (isRest ? 'rest' : 'work');
-    fsPhasePill.className = 'phase-pill fs-phase-pill ' + (isRest ? 'rest' : 'work');
-
-    const nextP = circuitSeq[circuitIndex+1];
-    const nextText = nextP ? ("Weiter: " + shortLabel(nextP) + " (" + fmt(nextP.seconds) + ")") : "Letzte Phase";
-    cNextUp.innerHTML = "Weiter: <b>" + (nextP ? shortLabel(nextP) : "Zirkel Ende") + "</b>" + (nextP ? " · " + fmt(nextP.seconds) : "");
-    fsNextUp.innerHTML = cNextUp.innerHTML;
-
-    cStartBtn.textContent = circuitRunning ? "Pause" : "Start";
-    fsStartBtn.textContent = circuitRunning ? "Pause" : "Start";
-  }
-
-  function circuitTick(){
-    if(!circuitRunning) return;
-    const remMs = circuitEndAt - performance.now();
-    if(remMs <= 0){
-      advanceCircuit();
-      return;
-    }
-    paintCircuitPhase();
-    circuitRaf = requestAnimationFrame(circuitTick);
-  }
-
-  function startCircuitPhase(){
-    const p = circuitSeq[circuitIndex];
-    circuitPhaseMs = p.seconds*1000;
-    circuitEndAt = performance.now() + circuitPhaseMs;
-    beepShort();
-    paintCircuitPhase();
-    circuitRaf = requestAnimationFrame(circuitTick);
-  }
-
-  function advanceCircuit(){
-    circuitIndex++;
-    if(circuitIndex >= circuitSeq.length){
-      finishCircuit();
-      return;
-    }
-    startCircuitPhase();
-  }
-
-  function startCircuit(){
-    if(circuitSeq.length === 0) return;
-    if(circuitFinished){ circuitIndex = -1; circuitFinished = false; }
-    circuitRunning = true;
-    if(circuitIndex < 0){
-      circuitIndex = 0;
-      startCircuitPhase();
-    } else {
-      // resume from pause
-      circuitEndAt = performance.now() + circuitPhaseMs;
-      circuitRaf = requestAnimationFrame(circuitTick);
-    }
-    cStartBtn.textContent = "Pause";
-    fsStartBtn.textContent = "Pause";
-  }
-
-  function pauseCircuit(){
-    circuitRunning = false;
-    cancelAnimationFrame(circuitRaf);
-    if(circuitIndex >= 0 && circuitEndAt !== null){
-      circuitPhaseMs = Math.max(0, circuitEndAt - performance.now());
-    }
-    cStartBtn.textContent = "Start";
-    fsStartBtn.textContent = "Start";
-  }
-
-  function stopCircuit(){
-    circuitRunning = false;
-    cancelAnimationFrame(circuitRaf);
-    fsOverlayEl.classList.remove('flash');
-  }
-
-  function skipCircuit(){
-    if(circuitSeq.length === 0) return;
-    if(circuitIndex < 0){ circuitIndex = 0; }
-    if(circuitRunning){
-      advanceCircuit();
-    } else {
-      circuitIndex++;
-      if(circuitIndex >= circuitSeq.length){
-        circuitIndex = circuitSeq.length - 1;
-        finishCircuit(true);
-        return;
-      }
-      const p = circuitSeq[circuitIndex];
-      circuitPhaseMs = p.seconds*1000;
-      circuitEndAt = null;
-      paintCircuitPhase();
-    }
-  }
-
-  function finishCircuit(silent){
-    circuitRunning = false;
-    circuitFinished = true;
-    cancelAnimationFrame(circuitRaf);
-    cPhaseLabel.textContent = "Fertig";
-    fsPhaseLabel.textContent = "Fertig";
-    cPhasePill.className = 'phase-pill';
-    fsPhasePill.className = 'phase-pill fs-phase-pill';
-    cPhaseName.textContent = "Zirkel geschafft 💪";
-    fsPhaseName.textContent = "Zirkel geschafft 💪";
-    cTimeReadout.textContent = "00:00";
-    fsTimeReadout.textContent = "00:00";
-    cRingFg.style.strokeDashoffset = CIRC;
-    fsRingFg.style.strokeDashoffset = CIRC;
-    cRingFg.classList.remove('rest','warn');
-    fsRingFg.classList.remove('rest','warn');
-    cNextUp.textContent = "";
-    fsNextUp.textContent = "";
-    cStartBtn.textContent = "Start";
-    fsStartBtn.textContent = "Start";
-    if(!silent){
-      beepFinish();
-      if(fsOverlayEl.classList.contains('active')){
-        fsOverlayEl.classList.add('flash');
-        setTimeout(()=>fsOverlayEl.classList.remove('flash'), 3000);
-      }
-    }
-  }
-
-  function resetCircuit(){
-    stopCircuit();
-    circuitIndex = -1;
-    circuitFinished = false;
-    circuitPhaseMs = 0;
-    circuitEndAt = null;
-    paintCircuitIdle(circuitSeq.length > 0);
-  }
-
-  cStartBtn.addEventListener('click', ()=> circuitRunning ? pauseCircuit() : startCircuit());
-  fsStartBtn.addEventListener('click', ()=> circuitRunning ? pauseCircuit() : startCircuit());
-  cSkipBtn.addEventListener('click', skipCircuit);
-  fsSkipBtn.addEventListener('click', skipCircuit);
-  cResetBtn.addEventListener('click', resetCircuit);
-  fsResetBtn.addEventListener('click', resetCircuit);
-
-  /* ================= FREE TIMER (manual) ================= */
-  const fRingFg = document.getElementById('fRingFg');
-  const fTimeReadout = document.getElementById('fTimeReadout');
-  const fTimeStatus = document.getElementById('fTimeStatus');
-  const fStartBtn = document.getElementById('fStartBtn');
-  const fResetBtn = document.getElementById('fResetBtn');
-  const fPresetsWrap = document.getElementById('fPresets');
-
-  let fTotalSec = 60;
-  let fRemainingMs = 60000;
-  let fRunning = false;
-  let fEndAt = null;
-  let fRaf = null;
-
-  function fPaint(){
-    const remSec = fRemainingMs/1000;
-    const frac = fTotalSec > 0 ? Math.max(0, remSec/fTotalSec) : 0;
-    const offset = CIRC * (1 - frac);
-    fRingFg.style.strokeDashoffset = offset;
-    fTimeReadout.textContent = fmt(remSec);
-    const warn = remSec <= 10 && remSec > 0;
-    fTimeReadout.classList.toggle('warn', warn);
-    fRingFg.classList.toggle('warn', warn);
-    fTimeStatus.textContent = fRunning ? "Läuft" : (remSec <= 0 ? "Fertig" : "Pausiert");
-  }
-  function fSetTotal(sec){
-    fTotalSec = sec;
-    fRemainingMs = sec*1000;
-    fStop();
-    fPaint();
-  }
-  function fTick(){
-    if(!fRunning) return;
-    fRemainingMs = Math.max(0, fEndAt - performance.now());
-    fPaint();
-    if(fRemainingMs <= 0){ fFinish(); return; }
-    fRaf = requestAnimationFrame(fTick);
-  }
-  function fStart(){
-    if(fRunning) return;
-    if(fRemainingMs <= 0){ fRemainingMs = fTotalSec*1000; }
-    fRunning = true;
-    fEndAt = performance.now() + fRemainingMs;
-    fStartBtn.textContent = "Pause";
-    fRaf = requestAnimationFrame(fTick);
-    fPaint();
-  }
-  function fPause(){
-    fRunning = false;
-    cancelAnimationFrame(fRaf);
-    fStartBtn.textContent = "Start";
-    fPaint();
-  }
-  function fStop(){
-    fRunning = false;
-    cancelAnimationFrame(fRaf);
-    fStartBtn.textContent = "Start";
-  }
-  function fFinish(){
-    fRunning = false;
-    cancelAnimationFrame(fRaf);
-    fRemainingMs = 0;
-    fStartBtn.textContent = "Start";
-    fPaint();
-    beepFinish();
-  }
-  fStartBtn.addEventListener('click', ()=> fRunning ? fPause() : fStart());
-  fResetBtn.addEventListener('click', ()=>{ fStop(); fRemainingMs = fTotalSec*1000; fPaint(); });
-
-  fPresetsWrap.querySelectorAll('.chip').forEach(chip=>{
-    chip.addEventListener('click', ()=>{
-      fPresetsWrap.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
-      chip.classList.add('active');
-      const sec = parseInt(chip.dataset.sec, 10);
-      document.getElementById('fCustomMin').value = Math.floor(sec/60);
-      document.getElementById('fCustomSec').value = sec%60;
-      fSetTotal(sec);
     });
-  });
-  document.getElementById('fApplyCustomBtn').addEventListener('click', ()=>{
-    const m = parseInt(document.getElementById('fCustomMin').value,10) || 0;
-    const s = parseInt(document.getElementById('fCustomSec').value,10) || 0;
-    const sec = Math.max(1, m*60+s);
-    fPresetsWrap.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
-    fSetTotal(sec);
-  });
-  function fAdjust(deltaSec){
-    fTotalSec = Math.max(5, fTotalSec + deltaSec);
-    fRemainingMs = Math.max(0, fRemainingMs + deltaSec*1000);
-    if(fRunning){ fEndAt = performance.now() + fRemainingMs; }
-    fPresetsWrap.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
-    fPaint();
-  }
-  document.getElementById('fPlus10').addEventListener('click', ()=>fAdjust(10));
-  document.getElementById('fPlus30').addEventListener('click', ()=>fAdjust(30));
-  document.getElementById('fMinus10').addEventListener('click', ()=>fAdjust(-10));
-  document.getElementById('fMinus30').addEventListener('click', ()=>fAdjust(-30));
-
-  fSetTotal(60);
-
-  /* ================= Fullscreen overlay ================= */
-  const fsOverlayEl = document.getElementById('fsOverlay');
-  const fsToggle = document.getElementById('fsToggle');
-  const fsClose = document.getElementById('fsClose');
-
-  function openFS(){
-    fsFocus.textContent = currentPlan.focus || (activeTab === 'circuit' ? 'Zirkel' : 'Timer');
-    fsOverlayEl.classList.add('active');
-    if(document.documentElement.requestFullscreen){
-      document.documentElement.requestFullscreen().catch(()=>{});
+    document.getElementById('loadExampleBtn').addEventListener('click', function () {
+        currentPlan = {
+            focus: HYROX_EXAMPLE.focus,
+            rounds: HYROX_EXAMPLE.rounds,
+            restStation: HYROX_EXAMPLE.restStation,
+            restRound: HYROX_EXAMPLE.restRound,
+            stations: HYROX_EXAMPLE.stations.map(function (s) { return (__assign({}, s)); })
+        };
+        focusInput.value = currentPlan.focus;
+        roundsInput.value = currentPlan.rounds;
+        restStationInput.value = currentPlan.restStation;
+        restRoundInput.value = currentPlan.restRound;
+        renderStations();
+        savePlan(currentISO, currentPlan);
+        rebuildCircuitFromPlan();
+    });
+    document.getElementById('clearPlanBtn').addEventListener('click', function () {
+        if (currentPlan.stations.length === 0 && !currentPlan.focus)
+            return;
+        if (confirm('Plan für diesen Tag wirklich leeren?')) {
+            currentPlan = defaultPlan();
+            focusInput.value = "";
+            roundsInput.value = 3;
+            restStationInput.value = 45;
+            restRoundInput.value = 90;
+            renderStations();
+            savePlan(currentISO, currentPlan);
+            rebuildCircuitFromPlan();
+        }
+    });
+    document.getElementById('copyYesterdayBtn').addEventListener('click', function () {
+        var prevISO = isoMinusDays(currentISO, 1);
+        var prevPlan = loadPlan(prevISO);
+        if (prevPlan.stations.length === 0 && !prevPlan.focus) {
+            alert('Für den Vortag ist kein Plan gespeichert.');
+            return;
+        }
+        currentPlan = {
+            focus: prevPlan.focus, rounds: prevPlan.rounds,
+            restStation: prevPlan.restStation, restRound: prevPlan.restRound,
+            stations: prevPlan.stations.map(function (e) { return (__assign({}, e)); })
+        };
+        focusInput.value = currentPlan.focus;
+        roundsInput.value = currentPlan.rounds;
+        restStationInput.value = currentPlan.restStation;
+        restRoundInput.value = currentPlan.restRound;
+        renderStations();
+        savePlan(currentISO, currentPlan);
+        rebuildCircuitFromPlan();
+    });
+    focusInput.addEventListener('input', function () { return scheduleSave(false); });
+    roundsInput.addEventListener('input', function () { return scheduleSave(); });
+    restStationInput.addEventListener('input', function () { return scheduleSave(); });
+    restRoundInput.addEventListener('input', function () { return scheduleSave(); });
+    planDateInput.addEventListener('change', function () {
+        loadIntoUI(planDateInput.value || todayISO());
+    });
+    /* ================= Tabs ================= */
+    var tabCircuitBtn = document.getElementById('tabCircuitBtn');
+    var tabFreeBtn = document.getElementById('tabFreeBtn');
+    var panelCircuit = document.getElementById('panelCircuit');
+    var panelFree = document.getElementById('panelFree');
+    var activeTab = 'circuit';
+    function setTab(tab) {
+        activeTab = tab;
+        tabCircuitBtn.classList.toggle('active', tab === 'circuit');
+        tabFreeBtn.classList.toggle('active', tab === 'free');
+        panelCircuit.classList.toggle('active', tab === 'circuit');
+        panelFree.classList.toggle('active', tab === 'free');
     }
-  }
-  function closeFS(){
-    fsOverlayEl.classList.remove('active');
-    if(document.fullscreenElement){
-      document.exitFullscreen().catch(()=>{});
+    tabCircuitBtn.addEventListener('click', function () { return setTab('circuit'); });
+    tabFreeBtn.addEventListener('click', function () { return setTab('free'); });
+    /* ================= Shared beep ================= */
+    function beep(pattern) {
+        try {
+            var ctx_1 = new (window.AudioContext || window.webkitAudioContext)();
+            var now_1 = ctx_1.currentTime;
+            pattern.forEach(function (_a) {
+                var t = _a.t, f = _a.f;
+                var osc = ctx_1.createOscillator();
+                var gain = ctx_1.createGain();
+                osc.type = 'sine';
+                osc.frequency.value = f;
+                gain.gain.setValueAtTime(0.0001, now_1 + t);
+                gain.gain.exponentialRampToValueAtTime(0.3, now_1 + t + 0.02);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now_1 + t + 0.2);
+                osc.connect(gain).connect(ctx_1.destination);
+                osc.start(now_1 + t);
+                osc.stop(now_1 + t + 0.25);
+            });
+        }
+        catch (e) { /* ignore */ }
     }
-  }
-  fsToggle.addEventListener('click', openFS);
-  fsClose.addEventListener('click', closeFS);
-  document.addEventListener('fullscreenchange', ()=>{
-    if(!document.fullscreenElement){ fsOverlayEl.classList.remove('active'); }
-  });
-
-  document.addEventListener('keydown', (e)=>{
-    const tag = (document.activeElement && document.activeElement.tagName) || '';
-    if(tag === 'INPUT' || tag === 'TEXTAREA') return;
-    if(e.code === 'Space'){
-      e.preventDefault();
-      if(activeTab === 'circuit'){ circuitRunning ? pauseCircuit() : startCircuit(); }
-      else { fRunning ? fPause() : fStart(); }
-    } else if(e.key === 'Escape' && fsOverlayEl.classList.contains('active')){
-      closeFS();
+    function beepShort() { beep([{ t: 0, f: 880 }]); }
+    function beepFinish() { beep([{ t: 0, f: 880 }, { t: 0.22, f: 880 }, { t: 0.44, f: 1046.5 }]); }
+    function fmt(sec) {
+        sec = Math.max(0, Math.ceil(sec));
+        var m = Math.floor(sec / 60);
+        var s = sec % 60;
+        return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
     }
-  });
-
-  /* ================= Init ================= */
-  loadIntoUI(todayISO());
-
+    var RADIUS = 88;
+    var CIRC = 2 * Math.PI * RADIUS;
+    [document.getElementById('cRingFg'), document.getElementById('fRingFg'), document.getElementById('fsRingFg')]
+        .forEach(function (el) { el.style.strokeDasharray = CIRC; });
+    /* ================= CIRCUIT ENGINE ================= */
+    var cRingFg = document.getElementById('cRingFg');
+    var cTimeReadout = document.getElementById('cTimeReadout');
+    var cPhaseName = document.getElementById('cPhaseName');
+    var cPhasePill = document.getElementById('cPhasePill');
+    var cPhaseLabel = document.getElementById('cPhaseLabel');
+    var cNextUp = document.getElementById('cNextUp');
+    var cStartBtn = document.getElementById('cStartBtn');
+    var cSkipBtn = document.getElementById('cSkipBtn');
+    var cResetBtn = document.getElementById('cResetBtn');
+    var fsRingFg = document.getElementById('fsRingFg');
+    var fsTimeReadout = document.getElementById('fsTimeReadout');
+    var fsPhaseName = document.getElementById('fsPhaseName');
+    var fsPhasePill = document.getElementById('fsPhasePill');
+    var fsPhaseLabel = document.getElementById('fsPhaseLabel');
+    var fsNextUp = document.getElementById('fsNextUp');
+    var fsFocus = document.getElementById('fsFocus');
+    var fsStartBtn = document.getElementById('fsStartBtn');
+    var fsSkipBtn = document.getElementById('fsSkipBtn');
+    var fsResetBtn = document.getElementById('fsResetBtn');
+    var circuitSeq = [];
+    var circuitIndex = -1;
+    var circuitRunning = false;
+    var circuitEndAt = null;
+    var circuitPhaseMs = 0;
+    var circuitRaf = null;
+    var circuitFinished = false;
+    function buildSequence(plan) {
+        var seq = [];
+        var stations = plan.stations.filter(function (s) { return (s.name && s.name.trim()) || s.seconds; });
+        if (stations.length === 0)
+            return seq;
+        var _loop_1 = function (r) {
+            stations.forEach(function (st, i) {
+                seq.push({
+                    type: 'work', round: r, totalRounds: plan.rounds,
+                    stationIndex: i + 1, totalStations: stations.length,
+                    name: st.name && st.name.trim() ? st.name.trim() : ('Station ' + (i + 1)),
+                    seconds: Math.max(5, st.seconds || 60)
+                });
+                var isLastStationInRound = i === stations.length - 1;
+                if (!isLastStationInRound && plan.restStation > 0) {
+                    seq.push({ type: 'rest', label: 'Pause', seconds: plan.restStation, round: r });
+                }
+            });
+            var isLastRound = r === plan.rounds;
+            if (!isLastRound && plan.restRound > 0) {
+                seq.push({ type: 'roundrest', label: 'Rundenpause', seconds: plan.restRound, round: r });
+            }
+        };
+        for (var r = 1; r <= plan.rounds; r++) {
+            _loop_1(r);
+        }
+        return seq;
+    }
+    function rebuildCircuitFromPlan() {
+        stopCircuit();
+        circuitSeq = buildSequence(currentPlan);
+        circuitIndex = -1;
+        circuitFinished = false;
+        var hasStations = circuitSeq.length > 0;
+        cStartBtn.disabled = !hasStations;
+        cSkipBtn.disabled = !hasStations;
+        fsStartBtn.disabled = !hasStations;
+        fsSkipBtn.disabled = !hasStations;
+        paintCircuitIdle(hasStations);
+    }
+    function paintCircuitIdle(hasStations) {
+        var label = hasStations ? "Bereit" : "Kein Zirkel geplant";
+        cPhaseLabel.textContent = label;
+        fsPhaseLabel.textContent = label;
+        cPhasePill.className = 'phase-pill';
+        fsPhasePill.className = 'phase-pill fs-phase-pill';
+        var firstText = hasStations ? circuitSeq[0].name || circuitSeq[0].label : "Füg Stationen im Plan hinzu";
+        cPhaseName.textContent = hasStations ? ("Runde 1/" + currentPlan.rounds + " · " + firstText) : "Zirkel bereit";
+        fsPhaseName.textContent = cPhaseName.textContent;
+        var totalSec = hasStations ? circuitSeq[0].seconds : 0;
+        cTimeReadout.textContent = fmt(totalSec);
+        fsTimeReadout.textContent = fmt(totalSec);
+        cRingFg.classList.remove('rest', 'warn');
+        fsRingFg.classList.remove('rest', 'warn');
+        cRingFg.style.strokeDashoffset = 0;
+        fsRingFg.style.strokeDashoffset = 0;
+        cNextUp.textContent = hasStations ? "" : "";
+        fsNextUp.textContent = "";
+        cStartBtn.textContent = "Start";
+        fsStartBtn.textContent = "Start";
+    }
+    function describePhase(p) {
+        if (!p)
+            return "";
+        if (p.type === 'work')
+            return "Runde " + p.round + "/" + p.totalRounds + " · Station " + p.stationIndex + "/" + p.totalStations + ": " + p.name;
+        if (p.type === 'rest')
+            return "Runde " + p.round + " · Pause";
+        if (p.type === 'roundrest')
+            return "Rundenpause";
+        return "";
+    }
+    function shortLabel(p) {
+        if (!p)
+            return "";
+        if (p.type === 'work')
+            return p.name;
+        return p.label || 'Pause';
+    }
+    function paintCircuitPhase() {
+        var p = circuitSeq[circuitIndex];
+        var remSec = Math.max(0, circuitEndAt !== null ? (circuitEndAt - performance.now()) / 1000 : circuitPhaseMs / 1000);
+        var totalSec = p.seconds;
+        var frac = totalSec > 0 ? Math.max(0, remSec / totalSec) : 0;
+        var offset = CIRC * (1 - frac);
+        cRingFg.style.strokeDashoffset = offset;
+        fsRingFg.style.strokeDashoffset = offset;
+        var isRest = p.type !== 'work';
+        cRingFg.classList.toggle('rest', isRest);
+        fsRingFg.classList.toggle('rest', isRest);
+        var warn = remSec <= 5 && remSec > 0;
+        cRingFg.classList.toggle('warn', warn && !isRest);
+        fsRingFg.classList.toggle('warn', warn && !isRest);
+        cTimeReadout.classList.toggle('warn', warn && !isRest);
+        fsTimeReadout.classList.toggle('warn', warn && !isRest);
+        var text = fmt(remSec);
+        cTimeReadout.textContent = text;
+        fsTimeReadout.textContent = text;
+        var desc = describePhase(p);
+        cPhaseName.textContent = desc;
+        fsPhaseName.textContent = desc;
+        cPhaseLabel.textContent = isRest ? "Pause" : "Station";
+        fsPhaseLabel.textContent = isRest ? "Pause" : "Station";
+        cPhasePill.className = 'phase-pill ' + (isRest ? 'rest' : 'work');
+        fsPhasePill.className = 'phase-pill fs-phase-pill ' + (isRest ? 'rest' : 'work');
+        var nextP = circuitSeq[circuitIndex + 1];
+        var nextText = nextP ? ("Weiter: " + shortLabel(nextP) + " (" + fmt(nextP.seconds) + ")") : "Letzte Phase";
+        cNextUp.innerHTML = "Weiter: <b>" + (nextP ? shortLabel(nextP) : "Zirkel Ende") + "</b>" + (nextP ? " · " + fmt(nextP.seconds) : "");
+        fsNextUp.innerHTML = cNextUp.innerHTML;
+        cStartBtn.textContent = circuitRunning ? "Pause" : "Start";
+        fsStartBtn.textContent = circuitRunning ? "Pause" : "Start";
+    }
+    function circuitTick() {
+        if (!circuitRunning)
+            return;
+        var remMs = circuitEndAt - performance.now();
+        if (remMs <= 0) {
+            advanceCircuit();
+            return;
+        }
+        paintCircuitPhase();
+        circuitRaf = requestAnimationFrame(circuitTick);
+    }
+    function startCircuitPhase() {
+        var p = circuitSeq[circuitIndex];
+        circuitPhaseMs = p.seconds * 1000;
+        circuitEndAt = performance.now() + circuitPhaseMs;
+        beepShort();
+        paintCircuitPhase();
+        circuitRaf = requestAnimationFrame(circuitTick);
+    }
+    function advanceCircuit() {
+        circuitIndex++;
+        if (circuitIndex >= circuitSeq.length) {
+            finishCircuit();
+            return;
+        }
+        startCircuitPhase();
+    }
+    function startCircuit() {
+        if (circuitSeq.length === 0)
+            return;
+        if (circuitFinished) {
+            circuitIndex = -1;
+            circuitFinished = false;
+        }
+        circuitRunning = true;
+        if (circuitIndex < 0) {
+            circuitIndex = 0;
+            startCircuitPhase();
+        }
+        else {
+            // resume from pause
+            circuitEndAt = performance.now() + circuitPhaseMs;
+            circuitRaf = requestAnimationFrame(circuitTick);
+        }
+        cStartBtn.textContent = "Pause";
+        fsStartBtn.textContent = "Pause";
+    }
+    function pauseCircuit() {
+        circuitRunning = false;
+        cancelAnimationFrame(circuitRaf);
+        if (circuitIndex >= 0 && circuitEndAt !== null) {
+            circuitPhaseMs = Math.max(0, circuitEndAt - performance.now());
+        }
+        cStartBtn.textContent = "Start";
+        fsStartBtn.textContent = "Start";
+    }
+    function stopCircuit() {
+        circuitRunning = false;
+        cancelAnimationFrame(circuitRaf);
+        fsOverlayEl.classList.remove('flash');
+    }
+    function skipCircuit() {
+        if (circuitSeq.length === 0)
+            return;
+        if (circuitIndex < 0) {
+            circuitIndex = 0;
+        }
+        if (circuitRunning) {
+            advanceCircuit();
+        }
+        else {
+            circuitIndex++;
+            if (circuitIndex >= circuitSeq.length) {
+                circuitIndex = circuitSeq.length - 1;
+                finishCircuit(true);
+                return;
+            }
+            var p = circuitSeq[circuitIndex];
+            circuitPhaseMs = p.seconds * 1000;
+            circuitEndAt = null;
+            paintCircuitPhase();
+        }
+    }
+    function finishCircuit(silent) {
+        circuitRunning = false;
+        circuitFinished = true;
+        cancelAnimationFrame(circuitRaf);
+        cPhaseLabel.textContent = "Fertig";
+        fsPhaseLabel.textContent = "Fertig";
+        cPhasePill.className = 'phase-pill';
+        fsPhasePill.className = 'phase-pill fs-phase-pill';
+        cPhaseName.textContent = "Zirkel geschafft 💪";
+        fsPhaseName.textContent = "Zirkel geschafft 💪";
+        cTimeReadout.textContent = "00:00";
+        fsTimeReadout.textContent = "00:00";
+        cRingFg.style.strokeDashoffset = CIRC;
+        fsRingFg.style.strokeDashoffset = CIRC;
+        cRingFg.classList.remove('rest', 'warn');
+        fsRingFg.classList.remove('rest', 'warn');
+        cNextUp.textContent = "";
+        fsNextUp.textContent = "";
+        cStartBtn.textContent = "Start";
+        fsStartBtn.textContent = "Start";
+        if (!silent) {
+            beepFinish();
+            if (fsOverlayEl.classList.contains('active')) {
+                fsOverlayEl.classList.add('flash');
+                setTimeout(function () { return fsOverlayEl.classList.remove('flash'); }, 3000);
+            }
+        }
+    }
+    function resetCircuit() {
+        stopCircuit();
+        circuitIndex = -1;
+        circuitFinished = false;
+        circuitPhaseMs = 0;
+        circuitEndAt = null;
+        paintCircuitIdle(circuitSeq.length > 0);
+    }
+    cStartBtn.addEventListener('click', function () { return circuitRunning ? pauseCircuit() : startCircuit(); });
+    fsStartBtn.addEventListener('click', function () { return circuitRunning ? pauseCircuit() : startCircuit(); });
+    cSkipBtn.addEventListener('click', skipCircuit);
+    fsSkipBtn.addEventListener('click', skipCircuit);
+    cResetBtn.addEventListener('click', resetCircuit);
+    fsResetBtn.addEventListener('click', resetCircuit);
+    /* ================= FREE TIMER (manual) ================= */
+    var fRingFg = document.getElementById('fRingFg');
+    var fTimeReadout = document.getElementById('fTimeReadout');
+    var fTimeStatus = document.getElementById('fTimeStatus');
+    var fStartBtn = document.getElementById('fStartBtn');
+    var fResetBtn = document.getElementById('fResetBtn');
+    var fPresetsWrap = document.getElementById('fPresets');
+    var fTotalSec = 60;
+    var fRemainingMs = 60000;
+    var fRunning = false;
+    var fEndAt = null;
+    var fRaf = null;
+    function fPaint() {
+        var remSec = fRemainingMs / 1000;
+        var frac = fTotalSec > 0 ? Math.max(0, remSec / fTotalSec) : 0;
+        var offset = CIRC * (1 - frac);
+        fRingFg.style.strokeDashoffset = offset;
+        fTimeReadout.textContent = fmt(remSec);
+        var warn = remSec <= 10 && remSec > 0;
+        fTimeReadout.classList.toggle('warn', warn);
+        fRingFg.classList.toggle('warn', warn);
+        fTimeStatus.textContent = fRunning ? "Läuft" : (remSec <= 0 ? "Fertig" : "Pausiert");
+    }
+    function fSetTotal(sec) {
+        fTotalSec = sec;
+        fRemainingMs = sec * 1000;
+        fStop();
+        fPaint();
+    }
+    function fTick() {
+        if (!fRunning)
+            return;
+        fRemainingMs = Math.max(0, fEndAt - performance.now());
+        fPaint();
+        if (fRemainingMs <= 0) {
+            fFinish();
+            return;
+        }
+        fRaf = requestAnimationFrame(fTick);
+    }
+    function fStart() {
+        if (fRunning)
+            return;
+        if (fRemainingMs <= 0) {
+            fRemainingMs = fTotalSec * 1000;
+        }
+        fRunning = true;
+        fEndAt = performance.now() + fRemainingMs;
+        fStartBtn.textContent = "Pause";
+        fRaf = requestAnimationFrame(fTick);
+        fPaint();
+    }
+    function fPause() {
+        fRunning = false;
+        cancelAnimationFrame(fRaf);
+        fStartBtn.textContent = "Start";
+        fPaint();
+    }
+    function fStop() {
+        fRunning = false;
+        cancelAnimationFrame(fRaf);
+        fStartBtn.textContent = "Start";
+    }
+    function fFinish() {
+        fRunning = false;
+        cancelAnimationFrame(fRaf);
+        fRemainingMs = 0;
+        fStartBtn.textContent = "Start";
+        fPaint();
+        beepFinish();
+    }
+    fStartBtn.addEventListener('click', function () { return fRunning ? fPause() : fStart(); });
+    fResetBtn.addEventListener('click', function () { fStop(); fRemainingMs = fTotalSec * 1000; fPaint(); });
+    fPresetsWrap.querySelectorAll('.chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+            fPresetsWrap.querySelectorAll('.chip').forEach(function (c) { return c.classList.remove('active'); });
+            chip.classList.add('active');
+            var sec = parseInt(chip.dataset.sec, 10);
+            document.getElementById('fCustomMin').value = Math.floor(sec / 60);
+            document.getElementById('fCustomSec').value = sec % 60;
+            fSetTotal(sec);
+        });
+    });
+    document.getElementById('fApplyCustomBtn').addEventListener('click', function () {
+        var m = parseInt(document.getElementById('fCustomMin').value, 10) || 0;
+        var s = parseInt(document.getElementById('fCustomSec').value, 10) || 0;
+        var sec = Math.max(1, m * 60 + s);
+        fPresetsWrap.querySelectorAll('.chip').forEach(function (c) { return c.classList.remove('active'); });
+        fSetTotal(sec);
+    });
+    function fAdjust(deltaSec) {
+        fTotalSec = Math.max(5, fTotalSec + deltaSec);
+        fRemainingMs = Math.max(0, fRemainingMs + deltaSec * 1000);
+        if (fRunning) {
+            fEndAt = performance.now() + fRemainingMs;
+        }
+        fPresetsWrap.querySelectorAll('.chip').forEach(function (c) { return c.classList.remove('active'); });
+        fPaint();
+    }
+    document.getElementById('fPlus10').addEventListener('click', function () { return fAdjust(10); });
+    document.getElementById('fPlus30').addEventListener('click', function () { return fAdjust(30); });
+    document.getElementById('fMinus10').addEventListener('click', function () { return fAdjust(-10); });
+    document.getElementById('fMinus30').addEventListener('click', function () { return fAdjust(-30); });
+    fSetTotal(60);
+    /* ================= Fullscreen overlay ================= */
+    var fsOverlayEl = document.getElementById('fsOverlay');
+    var fsToggle = document.getElementById('fsToggle');
+    var fsClose = document.getElementById('fsClose');
+    function openFS() {
+        fsFocus.textContent = currentPlan.focus || (activeTab === 'circuit' ? 'Zirkel' : 'Timer');
+        fsOverlayEl.classList.add('active');
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen().catch(function () { });
+        }
+    }
+    function closeFS() {
+        fsOverlayEl.classList.remove('active');
+        if (document.fullscreenElement) {
+            document.exitFullscreen().catch(function () { });
+        }
+    }
+    fsToggle.addEventListener('click', openFS);
+    fsClose.addEventListener('click', closeFS);
+    document.addEventListener('fullscreenchange', function () {
+        if (!document.fullscreenElement) {
+            fsOverlayEl.classList.remove('active');
+        }
+    });
+    document.addEventListener('keydown', function (e) {
+        var tag = (document.activeElement && document.activeElement.tagName) || '';
+        if (tag === 'INPUT' || tag === 'TEXTAREA')
+            return;
+        if (e.code === 'Space') {
+            e.preventDefault();
+            if (activeTab === 'circuit') {
+                circuitRunning ? pauseCircuit() : startCircuit();
+            }
+            else {
+                fRunning ? fPause() : fStart();
+            }
+        }
+        else if (e.key === 'Escape' && fsOverlayEl.classList.contains('active')) {
+            closeFS();
+        }
+    });
+    /* ================= Init ================= */
+    loadIntoUI(todayISO());
 })();
+
 </script>
 </body>
 </html>
